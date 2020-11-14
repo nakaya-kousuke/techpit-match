@@ -13,6 +13,10 @@
 ActiveRecord::Schema.define(version: 20201114053341) do
 
   create_table "users", force: :cascade do |t|
+    t.string "name", limit: 100, default: "", null: false
+    t.string "self_introduction", limit: 500
+    t.integer "sex", default: 0, null: false
+    t.string "img_name", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
